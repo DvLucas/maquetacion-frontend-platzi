@@ -9,6 +9,7 @@ Variables
 
 :root {
     --green-main: #47cfac;
+    --off-white: #e6e9ed;
 }
 
 body {
@@ -169,7 +170,8 @@ body {
     margin-bottom: 60px;
     grid-column: 2/4;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
 }
 
@@ -194,4 +196,124 @@ body {
     border-top: 35px solid var(--green-main);
     color: white;
     text-align: center;
+}
+
+/* blog page */
+
+.blog-container {
+    width: 100%;
+    height: auto;
+}
+
+.blog-img-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.blog-img-container .blog__img {
+    width: 100%;
+}
+
+.blog__article {
+    width: 70%;
+    margin: 0 auto 50px;
+}
+
+.blog-title-section {
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 2px solid #e6e9ed;
+}
+
+.blog__article .blog-title {
+    font-size: 35px;
+    font-weight: bold;
+}
+.blog__article .blog-body {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+.contact-main-container {
+    width: 100%;
+    height: 200px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--off-white);
+}
+
+.card-contact{
+    display: flex;
+    width: 80%;
+    margin: auto auto;
+}
+
+.card-contact__body {
+    margin-left: 10px;
+}
+
+.card-contact__img {
+    width: 70px;
+    height: 80px;
+    margin: auto auto;
+}
+.card-contact__title {
+    width: fit-content;
+    border-bottom: 1px solid black;
+}
+.card-contact__description {
+    width: 100%;
+}
+
+/*Perfil*/
+
+.header-main-profile {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background-color: var(--off-white);
+}
+
+.main-card-profile {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    /* grid-template-columns: 1fr 2fr; */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.card-profile__img {
+    width: 100%;
+    margin: auto;
+}
+
+.card-profile__body {
+    margin-left: 20px;
+}
+
+.main-profile {
+    width: 100%;
+    height: auto;
+}
+
+.main-profile__title {
+    width: 80%;
+    margin: 30px auto 0;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid var(--off-white);
+}
+
+.proyects-grid__containter {
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
 }
