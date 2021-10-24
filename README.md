@@ -1,5 +1,4 @@
 # maquetacion-frontend-platzi
-platzi frontend design course repository
 
 En este repositorio colocare todos los proyectos realizados en platzi sobre cursos de maquetacion html css y tambien proyectos realizados con JS vanilla
 
