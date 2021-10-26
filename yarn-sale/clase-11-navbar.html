@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <style>
+        :root{
+            --white: #FFFFFF;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .menu {
+            display:none;
+        }
+        .navbar-left__list,
+        .navbar-right__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        .navbar-left {
+            display: flex;
+        }
+        .navbar__logo {
+            width: 100px;
+        }
+        .navbar-left ul{
+            margin-left: 20px;
+        }
+        .menu__items {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            padding: 8px;
+        }
+        .menu__items:hover {
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            border-radius: 8px;
+        }
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-right__email {
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+            cursor: pointer;
+        }
+        .navbar-right__email .email__dropdown{
+            display: inline-block;
+            transform: rotate(90deg);
+        }
+        .navbar-shopping-cart {
+            position: relative;
+            margin-left: 12px;
+            cursor: pointer;
+        }
+        .navbar-shopping-cart .shopping-cart__badge {
+            position: absolute;
+            top:-2px;
+            right: -4px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--hospital-green);
+            font-size: 9px;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 760px) {
+            .menu {
+                display: block;
+            }
+            .navbar-left__list,
+            .navbar-right__email {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <img src="./assets/icons/icon_menu.svg" alt="menu" class="menu">
+
+        <div class="navbar-left">
+
+            <img src="./assets/logos/logo_yard_sale.svg" alt="" class="navbar__logo">
+
+            <ul class="navbar-left__list">
+                <li>
+                    <a class="menu__items" href="/">All</a>
+                </li>
+                <li>
+                    <a class="menu__items" href="">Clothes</a>
+                </li>
+                <li>
+                    <a class="menu__items" href="">Electronics</a>
+                </li>
+                <li>
+                    <a class="menu__items" href="">Furnitures</a>
+                </li>
+                <li>
+                    <a class="menu__items" href="">Toys</a>
+                </li>
+                <li>
+                    <a class="menu__items" href="">Others</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="navbar-right">
+            <ul class="navbar-right__list">
+                <li class="navbar-right__email">example@example.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./assets/icons/icon_shopping_cart.svg" alt="">
+                    <span class="shopping-cart__badge">2</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
